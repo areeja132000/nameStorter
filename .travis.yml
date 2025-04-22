@@ -30,3 +30,7 @@ jobs:
 # Before install steps
 before_install:
   - chmod +x mvnw
+
+branches:
+  only:
+    - main
