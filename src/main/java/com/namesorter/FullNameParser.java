@@ -22,7 +22,7 @@ public class FullNameParser {
 	}
 	
 	/**
-	 * Extracts first name from a full name
+	 * Extracts last name from a full name
 	 * 
 	 * @param fullName full name that needs to be parsed
 	 * @return         last name
