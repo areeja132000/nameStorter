@@ -1,5 +1,6 @@
 package com.namesorter;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,7 +11,12 @@ public class NameSorterHandler {
 		List<String> allNames = new ArrayList<>();
 		
 		//Read names to be sorted. If fails, exit
-		allNames = FileHandler.readAllLines(inputFile);
+		try {
+			allNames = FileHandler.readAllLines(inputFile);
+		} catch (IOException e) {
+			System.out.println("Trouble reading from file.");
+			System.exit(1);
+		}
 		
 		//Sort names
 		List<String> lines = NameSorter.sortNames(allNames);
@@ -19,6 +25,11 @@ public class NameSorterHandler {
 		lines.forEach(System.out::println);
 		
 		//Print sorted names to file. If fails, exit
-		FileHandler.writeAllLines(outputFile, lines);
+		try {
+			FileHandler.writeAllLines(outputFile, lines);
+		} catch (IOException e) {
+			System.out.println("Trouble writing to file.");
+			System.exit(1);
+		}
 	}
 }
