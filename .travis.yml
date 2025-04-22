@@ -1,0 +1,32 @@
+language: java
+jdk:
+  - openjdk17
+
+# Cache dependencies
+cache:
+  directories:
+    - $HOME/.m2
+
+# Build stages
+stages:
+  - build
+  - test
+  - run
+
+jobs:
+  include:
+    - stage: build
+      name: "Build the Project"
+      script: mvn package
+
+    - stage: test
+      name: "Unit Tests"
+      script: mvn test
+
+    - stage: run
+      name: "Run the Application"
+      script: mvn exec:java
+
+# Before install steps
+before_install:
+  - chmod +x mvnw

@@ -13,7 +13,7 @@ class FullNameParserTest {
 	}
 	
 	@Test
-	void testInValidGivenNames() {
+	void testInvalidGivenNames() {
 		String givenNames = FullNameParser.parseForGivenNames("Gary");
 		assertNull(givenNames);
 	}
@@ -31,7 +31,7 @@ class FullNameParserTest {
 	}
 	
 	@Test
-	void testInValidLastName() {
+	void testInvalidLastName() {
 		String lastName = FullNameParser.parseForGivenNames("Gary");
 		assertNull(lastName);
 	}
