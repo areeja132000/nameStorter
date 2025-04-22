@@ -1,6 +1,6 @@
 # Dye & Durham - Name Sorter assessment
 
-Name Sorter assessment for Dye & Durham. Given an unsorted-names-list.txt file of unsorted full names (each on a separate line), generates a sorted-names-list.txt file of sorted full names (each on a separate line).
+Name Sorter assessment for Dye & Durham. Given an unsorted-names-list.txt file of unsorted full names (each on a separate line), this program generates a sorted-names-list.txt file of sorted full names (each on a separate line).
 
 ## Assumptions
 
