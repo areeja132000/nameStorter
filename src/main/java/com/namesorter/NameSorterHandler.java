@@ -8,7 +8,7 @@ public class NameSorterHandler {
 
 	public static void sorterHandler (String inputFile, String outputFile) {
 		
-		List<String> allNames = new ArrayList<>();
+		List<String> allNames = null;
 		
 		//Read names to be sorted. If fails, exit
 		try {
