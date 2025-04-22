@@ -27,6 +27,7 @@ public class NameSorter {
 	
 	/**
 	 * Creates a list of Person objects given a list of full names
+	 * 
 	 * @param allNames list of full names
 	 * @return         list of Person objects
 	 */
@@ -59,6 +60,7 @@ public class NameSorter {
 	
 	/**
 	 * Creates a list of full names given a list of Person objects
+	 * 
 	 * @param people list of Person objects
 	 * @return       list of full names
 	 */
