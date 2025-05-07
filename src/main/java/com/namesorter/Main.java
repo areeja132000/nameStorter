@@ -11,7 +11,9 @@ public class Main {
 		
         String inputFile = args[0];
         String outputFile = args[1];
-        NameSorterHandler.sorterHandler(inputFile, outputFile);
+        
+        IHandler fileHandler = new FileHandler(inputFile, outputFile);
+        NameSorterHandler.sorterHandler(fileHandler);
 	    
 	}
 

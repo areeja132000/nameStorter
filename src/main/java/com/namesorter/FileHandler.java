@@ -5,14 +5,26 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
 
-public class FileHandler {
+public class FileHandler implements IHandler {
 	
-	public static List<String> readAllLines(String readPath) throws IOException {
-		return Files.readAllLines(Path.of(readPath));
+	Path inputPath;
+	Path outputPath;
+	
+	public FileHandler(String inputPath, String outputPath) {
+		this.inputPath = Path.of(inputPath); 
+		this.outputPath = Path.of(outputPath);
 	}
 	
-	public static void writeAllLines(String writePath, List<String> sortedNames) throws IOException {
-		Files.write(Path.of(writePath), sortedNames);
+	public List<String> readAllLines() throws IOException {
+		return Files.readAllLines(inputPath);
 	}
-
+	
+	public void writeAllLines(List<String> sortedNames) {
+		try {
+			Files.write(this.outputPath, sortedNames);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 }
